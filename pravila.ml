@@ -17,6 +17,7 @@ kakšne zahteve želimo:
 -> ob srednjem številu sosedov v večini situacij oživi
 -> ob prevelikem številu sosedov umre
 
+
 recimo da damo preprosto tako:
 -> če je mrtev in ima 4 ali manj živih sosedov potem ostane mrtev
 -> če je živ in ima 3 ali manj živih sosedov potem umre
