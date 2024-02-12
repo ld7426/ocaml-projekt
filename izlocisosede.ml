@@ -1,0 +1,1 @@
+(* tu not bodo funkcije, ki nam iz podane matrike (ne vem še kakšna bo) izločijo sosede v obliki kot sem jo določil *)
