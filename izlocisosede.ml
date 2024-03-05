@@ -27,6 +27,18 @@ let (^^^) x y = x ^ " " ^ y
 let izpisimatrikoint matrika =
  Array.map (fun vrstica -> print_string ((Array.fold_left (^^^) "" @@ Array.map string_of_int vrstica) ^ "\n")) matrika
 
+let mapmatrix f mat =
+Array.map (fun vrstica -> Array.map f vrstica) mat
+
+let intofbool = function
+| true -> 1
+| false -> 0
+
+let boolofint = function
+| 1 -> true
+| 0 -> false
+| _ -> true
+
 let izpisisosedeint sosedi = 
 match sosedi with 
 | prvi::drugi::tretji::cetrti::peti::sesti::sedmi::osmi::deveti::[] -> izpisimatrikoint [|[|0;prvi;0;drugi;0;0|]; [|tretji; cetrti; 0; peti; sesti; 0|]; [|0; sedmi; 0; osmi; 0; deveti|]|]
@@ -43,3 +55,4 @@ let sedmi = matrika.((i+1) mod m).((j-1+n) mod n) in
 let osmi = matrika.((i+1) mod m).((j+1) mod n) in
 let deveti = matrika.((i+1) mod m).((j+3) mod n) in
 prvi::drugi::tretji::cetrti::peti::sesti::sedmi::osmi::deveti::[]
+

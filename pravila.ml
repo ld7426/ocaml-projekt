@@ -19,9 +19,9 @@ kakšne zahteve želimo:
 
 
 recimo da damo preprosto tako:
--> če je mrtev in ima 4 ali manj živih sosedov potem ostane mrtev
--> če je živ in ima 3 ali manj živih sosedov potem umre
--> če je mrtev in ima med 5 in 9 sosedov potem oživi
+-> če je mrtev in ima 3 ali manj živih sosedov potem ostane mrtev
+-> če je živ in ima 2 ali manj živih sosedov potem umre
+-> če je mrtev in ima med 3 in 9 sosedov potem oživi
 -> če je živ in ima med 4 in 8 živih sosedov potem ostane živ
 -> Živ in 9 sosedov potem umre
 
@@ -40,3 +40,26 @@ else if zivisosedi <=3 && trenutno_stanje then false
 else if not trenutno_stanje then true
 else if zivisosedi<=8 then true
 else false
+
+let spremeni_stanje_zivi zivisosedi trenutno_stanje =
+if zivisosedi <=3 && (not trenutno_stanje) then false
+else if zivisosedi <=1 && trenutno_stanje then false
+else if not trenutno_stanje then true
+else if zivisosedi<=8 then true
+else false
+
+
+let matrikasestejizloceni izloci matrika =
+let m = Array.length matrika in
+let n = Array.length matrika.(0) in
+Array.init m (fun i -> Array.init n (fun j -> sestejlist @@ izloci matrika m n i j))
+
+let kopirajmatriko matrika =
+Array.map Array.copy matrika
+
+let korak izloci matrika =
+let m = Array.length matrika in
+let n = Array.length matrika.(0) in
+Array.init m (fun i -> Array.init n (fun j -> spremeni_stanje_zivi (sestejlist @@ izloci matrika m n i j) matrika.(i).(j) ))
+
+
