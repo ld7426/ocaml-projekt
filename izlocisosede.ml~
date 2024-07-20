@@ -15,7 +15,7 @@ trenutno nastavljeno na obliko
 let rec randomarray n =
 match n with
 | 0 -> [| |]
-| k -> Array.append [|(Random.int 9) + 1|] (randomarray (k-1))
+| k -> Array.append [|Random.bool()|] (randomarray (k-1))
 
 let rec randommatrika m n =
 match m with 
@@ -55,3 +55,4 @@ let sedmi = matrika.((i+1) mod m).((j-1+n) mod n) in
 let osmi = matrika.((i+1) mod m).((j+1) mod n) in
 let deveti = matrika.((i+1) mod m).((j+3) mod n) in
 prvi::drugi::tretji::cetrti::peti::sesti::sedmi::osmi::deveti::[]
+

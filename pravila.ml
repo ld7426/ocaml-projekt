@@ -54,12 +54,17 @@ let m = Array.length matrika in
 let n = Array.length matrika.(0) in
 Array.init m (fun i -> Array.init n (fun j -> sestejlist @@ izloci matrika m n i j))
 
-let kopirajmatriko matrika =
+let kopirajmatriko matrika = (*za sprobavat sem rabil to funkcijo, da nisem spreminjal matrike*)
 Array.map Array.copy matrika
 
-let korak izloci matrika =
+let korak izloci matrika = (*glavna funkcija ki jo kličemo skupaj s funkcijo izlocisosede iz izlocisosede.ml, primer: let trenutna = korak izlocisosede zacetnamatrika *)
 let m = Array.length matrika in
 let n = Array.length matrika.(0) in
 Array.init m (fun i -> Array.init n (fun j -> spremeni_stanje_zivi (sestejlist @@ izloci matrika m n i j) matrika.(i).(j) ))
 
+let zacetnamatrika = [|[|false; true; true; true; true; true; true|]; (* za večje primere si je najbolje generirati naključno matriko z ukazom: let matrika = randommatrika m n, ki je v izlocisosede.ml*)
+    [|false; true; true; true; true; true; true|];
+    [|true; true; true; true; true; true; true|];
+    [|false; false; true; true; true; false; true|];
+    [|false; false; false; true; false; true; false|]|]
 

@@ -15,7 +15,7 @@ trenutno nastavljeno na obliko
 let rec randomarray n =
 match n with
 | 0 -> [| |]
-| k -> Array.append [|(Random.int 9) + 1|] (randomarray (k-1))
+| k -> Array.append [|Random.bool()|] (randomarray (k-1))
 
 let rec randommatrika m n =
 match m with 
