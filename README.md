@@ -1,4 +1,4 @@
-[link](https://github.com/ld7426/projekt)
+To je star repozitorij, nov je dostopen na [(https://github.com/ld7426/projekt)](https://github.com/ld7426/projekt)
 
 Trenutna inicializacija:
 
