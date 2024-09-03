@@ -1,4 +1,4 @@
-To je star repozitorij, nov je dostopen na [(https://github.com/ld7426/projekt)](https://github.com/ld7426/projekt)
+To je star repozitorij, nov je dostopen na [(https://github.com/ld7426/projekt-prog1)](https://github.com/ld7426/projekt-prog1)
 
 Trenutna inicializacija:
 
