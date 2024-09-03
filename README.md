@@ -1,3 +1,5 @@
+[link](https://github.com/ld7426/projekt)
+
 Trenutna inicializacija:
 
 Vklopi utop
